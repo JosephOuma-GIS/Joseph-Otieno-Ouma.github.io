@@ -1,1 +1,1 @@
-# Joseph-Otieno-Ouma.github.io
+The African Geomatics Group.github.io
