@@ -1,37 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Ouma | Geospatial Data Scientist</title>
+    <meta name="description" content="The African Geomatics Group - Expert Geospatial Consulting & Training across Africa. Led by Joseph Otieno Ouma, Director & Lead Consultant.">
+    <title>The African Geomatics Group | Geospatial Intelligence & Consulting</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Modern Professional Color Palette - Earthy, Trustworthy, African-inspired */
         :root {
-            --primary-color: #1a472a;
-            --secondary-color: #2d5a3c;
-            --accent-color: #4a7c59;
-            --text-dark: #2d3748;
-            --text-light: #718096;
-            --background: #ffffff;
-            --background-alt: #f8f9fa;
+            --primary: #1e40af;      /* Deep Blue - Trust & Professionalism */
+            --secondary: #15803d;    /* Rich Green - Africa, Growth, Sustainability */
+            --accent: #dc2626;       /* Bold Red - Energy, Urgency, African vibrancy */
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --bg-alt: #f1f5f9;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--background);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
         }
-
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -39,1082 +34,370 @@
         /* Navigation */
         .navbar {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            top: 0; width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
         }
-
+        .logo span {
+            color: var(--secondary);
+        }
         .nav-menu {
             display: flex;
+            gap: 2.5rem;
             list-style: none;
-            gap: 2rem;
         }
-
         .nav-menu a {
             text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
         }
-
         .nav-menu a:hover {
-            color: var(--primary-color);
+            color: var(--secondary);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--background) 0%, #f8f9fa 100%);
-            padding: 80px 0 0 0;
+            background: linear-gradient(to right, #f8fafc 50%, #e0e7ff 100%);
+            padding-top: 100px;
         }
-
         .hero-content {
             flex: 1;
-            padding: 0 2rem;
+            padding-right: 3rem;
         }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
         }
-
-        .hero-subtitle {
+        .hero h1 span {
+            color: var(--secondary);
+        }
+        .hero p {
             font-size: 1.3rem;
-            color: var(--text-light);
+            color: var(--gray);
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 650px;
         }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
         .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            text-decoration: none;
             display: inline-block;
+            transition: all 0.3s;
         }
-
         .btn-primary {
-            background: var(--primary-color);
+            background: var(--secondary);
             color: white;
         }
-
         .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
+            background: #166534;
+            transform: translateY(-3px);
         }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 1rem;
         }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
+        .btn-outline:hover {
+            background: var(--primary);
             color: white;
-            transform: translateY(-2px);
-        }
-
-        .hero-visual {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .map-visualization {
-            position: relative;
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(45deg, var(--accent-color) 0%, var(--secondary-color) 100%);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .pulse-dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background: #ff6b6b;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: pulse 2s infinite;
-        }
-
-        .pulse-ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #ff6b6b;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: ring 2s infinite;
-        }
-
-        .grid-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        @keyframes pulse {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.7; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        }
-
-        @keyframes ring {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
         }
 
         /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
+        section { padding: 100px 0; }
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 3rem;
         }
-
-        /* About Section */
-        .about {
-            background: var(--background);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: var(--text-dark);
-        }
-
-        .skills {
-            margin-top: 2rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .skill-tag {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .about-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
+        .section-subtitle {
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary-color);
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            font-size: 1.2rem;
+            color: var(--gray);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* Enhanced Services & Courses Styles */
-        .services-category, .courses-category {
-            margin-bottom: 4rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .service-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .service-features span {
-            background: #e8f5e8;
-            color: var(--primary-color);
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Courses Grid */
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .course-box {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .course-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .course-header {
-            padding: 2rem;
-            color: white;
-            position: relative;
-            min-height: 180px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .course-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-
-        .course-header h3 {
-            margin: 0.5rem 0;
-            font-size: 1.3rem;
-            line-height: 1.3;
-        }
-
-        .course-header p {
-            margin: 0;
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-
-        /* Course Theme Backgrounds */
-        .qgis-course {
-            background: linear-gradient(135deg, #179c52 0%, #1a472a 100%);
-        }
-
-        .gee-course {
-            background: linear-gradient(135deg, #4285f4 0%, #1a472a 100%);
-        }
-
-        .arcpro-course {
-            background: linear-gradient(135deg, #e41c38 0%, #1a472a 100%);
-        }
-
-        .programming-course {
-            background: linear-gradient(135deg, #667eea 0%, #1a472a 100%);
-        }
-
-        .course-content {
-            padding: 2rem;
-        }
-
-        .course-description {
-            margin-bottom: 1.5rem;
-        }
-
-        .course-description p {
-            color: #4a5568;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .course-details {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem 0;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .detail-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: #4a5568;
-            font-size: 0.9rem;
-        }
-
-        .detail-item i {
-            color: var(--primary-color);
-            width: 16px;
-        }
-
-        .learning-outcomes h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-
-        .learning-outcomes ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .learning-outcomes li {
-            padding: 0.3rem 0;
-            color: #4a5568;
-            position: relative;
-            padding-left: 1.5rem;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .learning-outcomes li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .course-btn {
-            width: 100%;
-            padding: 12px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .course-btn:hover {
-            background: var(--secondary-color);
-        }
-
-        /* Projects Section */
-        .projects {
-            background: var(--background);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-visual {
-            width: 100%;
-            height: 100%;
-        }
-
-        .gis-visual-1 {
-            background: linear-gradient(45deg, #4a7c59, #8fb996);
-        }
-
-        .gis-visual-2 {
-            background: linear-gradient(45deg, #1a472a, #4a7c59);
-        }
-
-        .gis-visual-3 {
-            background: linear-gradient(45deg, #8fb996, #4a7c59);
-        }
-
-        /* New Project Visual Styles */
-        .gis-visual-4 {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gis-visual-4::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 2%, transparent 2.5%),
-                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 2%, transparent 2.5%),
-                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 3%, transparent 3.5%);
-            background-size: 50px 50px;
-        }
-
-        .gis-visual-5 {
-            background: linear-gradient(45deg, #e67e22, #d35400);
-            position: relative;
-        }
-
-        .gis-visual-5::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%),
-                linear-gradient(0deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%);
-            background-size: 30px 30px;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .project-tech span {
-            background: var(--background-alt);
-            color: var(--text-dark);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--background);
-        }
-
-        .contact-content {
+        /* About */
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        .director-title {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin: 0.5rem 0;
         }
 
-        .contact-info h3 {
-            color: var(--primary-color);
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-left: 5px solid var(--secondary);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Careers / Jobs Section */
+        .jobs {
+            background: var(--bg-alt);
+        }
+        .job-listing {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 1rem;
+        }
+        .job-title {
             font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
         }
-
-        .contact-methods {
-            margin: 2rem 0;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .contact-method i {
-            width: 30px;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
+        .job-type {
+            background: var(--accent);
             color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: background 0.3s ease;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .job-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin: 1rem 0;
         }
 
-        .social-link:hover {
-            background: var(--secondary-color);
+        /* Contact & Footer */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
         }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        /* Footer */
         .footer {
-            background: var(--primary-color);
+            background: var(--primary);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .map-visualization {
-                width: 300px;
-                height: 300px;
-            }
+            .hero, .about-grid, .contact-grid { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 2.8rem; }
+            .nav-menu { display: none; }
         }
     </style>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Joseph Otieno Ouma</div>
+        <div class="container nav-container">
+            <div class="logo">The African <span>Geomatics Group</span></div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#careers">Careers</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">GIS Consultant & Google Earth Engine Developer</h1>
-            <p class="hero-subtitle">The science of Where, What, When and So What?</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="map-visualization">
-                <div class="pulse-dot"></div>
-                <div class="pulse-ring"></div>
-                <div class="grid-lines"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm Joseph Otieno Ouma, I provide specialized technical consulting for clients who need to understand the "where", "why" and "So What" behind complex environmental challenges. I transform raw geospatial data into clear, decision-ready insights using a suite of advanced tools, including remote sensing, machine learning, and spatial statistics.</p>
-                    <p>My passion lies in leveraging cutting-edge geospatial technologies to solve complex environmental and urban planning challenges across East Africa and beyond.</p>
-                    
-                    <div class="skills">
-                        <h3>Core Competencies</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Google Earth Engine</span>
-                            <span class="skill-tag">Remote Sensing</span>
-                            <span class="skill-tag">Spatial Analysis</span>
-                            <span class="skill-tag">Web GIS Development</span>
-                            <span class="skill-tag">Python & JavaScript</span>
-                            <span class="skill-tag">QGIS & ArcGIS</span>
-                            <span class="skill-tag">Cartography</span>
-                            <span class="skill-tag">Environmental Monitoring</span>
-                        </div>
-                    </div>
+        <div class="container" style="display: flex; align-items: center;">
+            <div class="hero-content">
+                <h1>Geospatial Intelligence<br>for Africa's Future</h1>
+                <p>Leading geomatics consulting firm delivering high-impact spatial solutions across land management, environmental monitoring, urban planning, and climate resilience in Africa.</p>
+                <div style="margin-top: 2rem;">
+                    <a href="#services" class="btn btn-primary">Explore Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Schedule Consultation</a>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">International Reach</div>
-                        <div class="countries-flags" style="margin-top: 15px;">
-                            <div style="display: flex; justify-content: center; gap: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 1.5rem;">🇰🇪</div>
-                                    <div style="font-size: 0.8rem; margin-top: 5px;">Kenya</div>
-                                </div>
-                                <div style="text-align: center;">
-                                    <div style="font-size: 1.5rem;">🇨🇳</div>
-                                    <div style="font-size: 0.8rem; margin-top: 5px;">China</div>
-                                </div>
-                                <div style="text-align: center;">
-                                    <div style="font-size: 1.5rem;">🇳🇬</div>
-                                    <div style="font-size: 0.8rem; margin-top: 5px;">Nigeria</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services & Courses Section -->
-    <section id="services" style="padding: 5rem 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Services & Professional Training</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #4a5568;">
-                Expert GIS consulting services and comprehensive training programs to advance your geospatial capabilities
-            </p>
-
-            <!-- Consulting Services -->
-            <div class="services-category">
-                <h3 style="text-align: center; color: #1a472a; margin-bottom: 2rem; font-size: 1.8rem;">Consulting Services</h3>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-satellite"></i>
-                        </div>
-                        <h3>Remote Sensing Analysis</h3>
-                        <p>Advanced satellite imagery processing, land cover classification, and environmental monitoring using cutting-edge algorithms and machine learning.</p>
-                        <div class="service-features">
-                            <span>Satellite Data Processing</span>
-                            <span>Change Detection</span>
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <h3>Custom Web GIS Solutions</h3>
-                        <p>Interactive mapping applications and spatial data dashboards tailored to your specific organizational needs and workflows.</p>
-                        <div class="service-features">
-                            <span>Interactive Maps</span>
-                            <span>Real-time Data</span>
-                            <span>Custom Dashboards</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Spatial Data Analytics</h3>
-                        <p>Advanced spatial statistics, hotspot analysis, and predictive modeling for data-driven decision making and strategic planning.</p>
-                        <div class="service-features">
-                            <span>Spatial Statistics</span>
-                            <span>Predictive Modeling</span>
-                            <span>Hotspot Analysis</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professional Courses -->
-            <div class="courses-category" style="margin-top: 4rem;">
-                <h3 style="text-align: center; color: #1a472a; margin-bottom: 2rem; font-size: 1.8rem;">Professional GIS Courses</h3>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1rem; color: #4a5568;">
-                    Hands-on training programs designed by industry experts to build practical skills and advance careers in geospatial technology
+                <p style="margin-top: 2rem; font-size: 1.1rem; color: var(--secondary); font-weight: 600;">
+                    Joseph Otieno Ouma • Director & Lead Consultant
                 </p>
-                
-                <div class="courses-grid">
-                    <!-- QGIS Course -->
-                    <div class="course-box">
-                        <div class="course-header qgis-course">
-                            <div class="course-badge">Beginner to Advanced</div>
-                            <h3>Hands on With QGIS</h3>
-                            <p>Master Open-Source GIS Platform</p>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-description">
-                                <p>Comprehensive training in QGIS, the world's leading open-source GIS software. From fundamental concepts to advanced spatial analysis techniques used by professionals.</p>
-                            </div>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>6 Weeks | 24 Hours</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>GIS Analysts | Students</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>QGIS 3.x | Plugins</span>
-                                </div>
-                            </div>
-                            <div class="learning-outcomes">
-                                <h4>Key Learning Outcomes:</h4>
-                                <ul>
-                                    <li>Advanced spatial analysis and data management</li>
-                                    <li>Professional map design and cartography</li>
-                                    <li>Automation with Processing Toolbox</li>
-                                    <li>3D visualization and web mapping</li>
-                                </ul>
-                            </div>
-                            <button class="course-btn" onclick="enrollCourse('Hands on With QGIS')">Enroll Now</button>
-                        </div>
-                    </div>
-
-                    <!-- Google Earth Engine Course -->
-                    <div class="course-box">
-                        <div class="course-header gee-course">
-                            <div class="course-badge">Most Popular</div>
-                            <h3>Google Earth Engine: Basics to Advanced</h3>
-                            <p>Cloud Computing for Geospatial Analysis</p>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-description">
-                                <p>Harness the power of Google's cloud computing platform for petabyte-scale geospatial analysis. Learn to process satellite imagery and build automated analysis pipelines.</p>
-                            </div>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>8 Weeks | 32 Hours</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Researchers | Developers</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>JavaScript | API</span>
-                                </div>
-                            </div>
-                            <div class="learning-outcomes">
-                                <h4>Key Learning Outcomes:</h4>
-                                <ul>
-                                    <li>Process satellite imagery at scale</li>
-                                    <li>Implement machine learning algorithms</li>
-                                    <li>Build time-series analysis applications</li>
-                                    <li>Develop custom Earth Engine applications</li>
-                                </ul>
-                            </div>
-                            <button class="course-btn" onclick="enrollCourse('Google Earth Engine: Basics to Advanced')">Enroll Now</button>
-                        </div>
-                    </div>
-
-                    <!-- ArcGIS Pro Course -->
-                    <div class="course-box">
-                        <div class="course-header arcpro-course">
-                            <div class="course-badge">Industry Standard</div>
-                            <h3>Data Analysis & Visualization in ArcPro</h3>
-                            <p>Enterprise GIS Solutions</p>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-description">
-                                <p>Master Esri's flagship software for professional GIS workflows. Learn advanced data analysis, 3D visualization, and enterprise-level spatial data management.</p>
-                            </div>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>5 Weeks | 20 Hours</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Professionals | Analysts</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>ArcPro | Model Builder</span>
-                                </div>
-                            </div>
-                            <div class="learning-outcomes">
-                                <h4>Key Learning Outcomes:</h4>
-                                <ul>
-                                    <li>Advanced geoprocessing and analysis</li>
-                                    <li>3D visualization and scene creation</li>
-                                    <li>Dashboard and story map development</li>
-                                    <li>Enterprise data management</li>
-                                </ul>
-                            </div>
-                            <button class="course-btn" onclick="enrollCourse('Data Analysis & Visualization in ArcPro')">Enroll Now</button>
-                        </div>
-                    </div>
-
-                    <!-- GIS Programming Course -->
-                    <div class="course-box">
-                        <div class="course-header programming-course">
-                            <div class="course-badge">Advanced Level</div>
-                            <h3>GIS Programming & Automation</h3>
-                            <p>Custom Solutions Development</p>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-description">
-                                <p>Learn to automate GIS workflows and develop custom geospatial applications using Python, APIs, and web technologies. Build scalable solutions for complex spatial problems.</p>
-                            </div>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>7 Weeks | 28 Hours</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Developers | Analysts</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>Python | APIs | Web GIS</span>
-                                </div>
-                            </div>
-                            <div class="learning-outcomes">
-                                <h4>Key Learning Outcomes:</h4>
-                                <ul>
-                                    <li>Python scripting for GIS automation</li>
-                                    <li>Web GIS application development</li>
-                                    <li>REST API integration</li>
-                                    <li>Custom tool and plugin creation</li>
-                                </ul>
-                            </div>
-                            <button class="course-btn" onclick="enrollCourse('GIS Programming & Automation')">Enroll Now</button>
-                        </div>
-                    </div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <div style="width: 420px; height: 420px; background: linear-gradient(135deg, var(--secondary), var(--primary)); border-radius: 20px; margin: 0 auto; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                    <div style="position: absolute; inset: 20px; background: url('https://via.placeholder.com/400x400/1e40af/ffffff?text=AFRICA+MAP') center/cover; border-radius: 16px;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- About -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual gis-visual-1"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Urban Sprawl Monitoring</h3>
-                        <p>Time-series analysis of urban expansion in Nairobi using Landsat imagery and machine learning classification.</p>
-                        <div class="project-tech">
-                            <span>Google Earth Engine</span>
-                            <span>Landsat</span>
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
+            <h2 class="section-title">About The African Geomatics Group</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Precision. Insight. Impact.</h3>
+                    <p>The African Geomatics Group is a premier geospatial consulting firm headquartered in Nairobi, Kenya, specializing in advanced spatial analysis, remote sensing, and GIS solutions tailored for African development challenges.</p>
+                    <p>Led by <strong>Joseph Otieno Ouma</strong>, a renowned geospatial expert with over a decade of experience across East Africa, China, and West Africa, we bridge cutting-edge technology with local knowledge to deliver actionable insights.</p>
+                    <p class="director-title">Joseph Otieno Ouma<br><span style="color: var(--gray); font-weight: normal;">MSc Remote Sensing & GIS • Google Earth Engine Specialist</span></p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual gis-visual-2"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Agricultural Land Assessment</h3>
-                        <p>Crop health monitoring and yield prediction system for smallholder farmers across East Africa.</p>
-                        <div class="project-tech">
-                            <span>Sentinel-2</span>
-                            <span>NDVI Analysis</span>
-                            <span>Python, Deep Learning</span>
-                        </div>
-                    </div>
+                <div style="background: var(--bg-alt); padding: 3rem; border-radius: 16px;">
+                    <h3 style="color: var(--primary); margin-bottom: 2rem;">Our Expertise</h3>
+                    <ul style="list-style: none; font-size: 1.1rem; line-height: 2.2;">
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 1rem;"></i> Land Use & Urban Planning</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 1rem;"></i> Environmental & Climate Monitoring</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 1rem;"></i> Agricultural Intelligence</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 1rem;"></i> Infrastructure & Disaster Management</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 1rem;"></i> Custom Web GIS Applications</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual gis-visual-3"></div>
+            </div>
+        </div>
+    </section>
 
-                            <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Services -->
+    <section id="services" style="background: white;">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Work Together</h3>
-                    <p>Open to collaborations, whether you need GIS consulting, custom development, or training services, feel free to reach out.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>ouma.otih@gmail.com</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <span>+254 713 741 913</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nairobi, Kenya</span>
-                        </div>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">End-to-end geospatial solutions from data acquisition to decision-ready insights</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>Remote Sensing & Earth Observation</h3>
+                    <p>High-resolution satellite analysis, change detection, and time-series monitoring using Sentinel, Landsat, and commercial imagery.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Land Administration & Cadastre</h3>
+                    <p>Digital land registration, boundary delineation, and tenure security solutions for governments and communities.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-city"></i>
+                    <h3>Urban Planning & Smart Cities</h3>
+                    <p>Spatial modeling, infrastructure planning, and sustainable urban development strategies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Environmental & Climate Solutions</h3>
+                    <p>Deforestation tracking, carbon mapping, flood risk modeling, and climate adaptation planning.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Custom GIS Development</h3>
+                    <p>Tailored web GIS platforms, automation scripts, and enterprise spatial systems.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Professional Training & Capacity Building</h3>
+                    <p>Corporate and institutional training in QGIS, Google Earth Engine, ArcGIS Pro, and GIS programming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers / Jobs -->
+    <section id="careers" class="jobs">
+        <div class="container">
+            <h2 class="section-title">Join Our Team</h2>
+            <p class="section-subtitle">We are expanding our expert team across Africa. Be part of shaping the future of geospatial intelligence on the continent.</p>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <div class="job-title">Senior GIS Analyst (Remote Sensing Specialist)</div>
+                    <div class="job-type">Full-Time • Nairobi or Remote</div>
+                </div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya • Posted 2 weeks ago</div>
+                <p>Lead advanced remote sensing projects using Google Earth Engine, machine learning classification, and multi-sensor data fusion.</p>
+                <a href="mailto:careers@african-geomatics.com" class="btn btn-primary" style="display: inline-block; width: auto; margin-top: 1rem;">Apply Now</a>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <div class="job-title">Web GIS Developer</div>
+                    <div class="job-type">Full-Time • Flexible Location</div>
+                </div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Remote (Africa) • Posted 1 month ago</div>
+                <p>Develop interactive mapping platforms using Leaflet, Mapbox, GeoServer, and modern JavaScript frameworks.</p>
+                <a href="mailto:careers@african-geomatics.com" class="btn btn-primary" style="display: inline-block; width: auto; margin-top: 1rem;">Apply Now</a>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem;">
+                Don't see your role? Send your CV to <strong>careers@african-geomatics.com</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-grid">
+                <div>
+                    <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1.5rem;">Get in Touch</h3>
+                    <p>We partner with governments, NGOs, private sector, and development agencies across Africa.</p>
+                    <div style="margin: 2rem 0; line-height: 2.4; font-size: 1.1rem;">
+                        <div><i class="fas fa-envelope" style="color: var(--secondary); width: 30px;"></i> info@african-geomatics.com</div>
+                        <div><i class="fas fa-phone" style="color: var(--secondary); width: 30px;"></i> +254 713 741 913</div>
+                        <div><i class="fas fa-location-dot" style="color: var(--secondary); width: 30px;"></i> Nairobi, Kenya</div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/joseph-otieno-ouma" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/yourusername" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://twitter.com/yourusername" class="social-link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://wa.me/254713741913" class="social-link" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="#" class="social-link" style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <form style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="text" placeholder="Your Name" style="padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    <input type="email" placeholder="Your Email" style="padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    <textarea rows="6" placeholder="Tell us about your project..." style="padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;"></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -1124,35 +407,22 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Joseph Otieno Ouma. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">GIS Consultant & Google Earth Engine Developer</p>
+            <p style="font-size: 1.1rem;">&copy; 2025 The African Geomatics Group. All rights reserved.</p>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Transforming Africa's Future Through Spatial Intelligence</p>
         </div>
     </footer>
-                            <script>
-        // Smooth scrolling for navigation links
+
+    <script>
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert and reset the form
-            alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon at ${email}.`);
-            this.reset();
-        });
+    </script>
+</body>
+</html>
 
